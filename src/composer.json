@@ -18,6 +18,7 @@
         "phpstan/phpstan": "^0.12.50",
         "psalm/plugin-symfony": "^1.5",
         "squizlabs/php_codesniffer": "3.*",
+        "symfony/phpunit-bridge": "^5.1",
         "vimeo/psalm": "^3.17"
     },
     "config": {
@@ -57,11 +58,14 @@
         "post-update-cmd": [
             "@auto-scripts"
         ],
-        "test": [
+        "static": [
             "./vendor/bin/psalm --show-info=true",
             "./vendor/bin/phpcs . -v",
             "./vendor/bin/phpstan analyse -c phpstan.neon",
-            "./vendor/bin/phpmd . text cleancode,codesize,controversial,design,naming,unusedcode --exclude 'vendor','var'"
+            "./vendor/bin/phpmd . text cleancode,codesize,controversial,design,naming,unusedcode --exclude 'vendor','var','bin/.phpunit'"
+        ],
+        "unit": [
+            "php bin/phpunit"
         ]
     },
     "conflict": {
