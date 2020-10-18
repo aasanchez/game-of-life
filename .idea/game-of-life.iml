@@ -45,6 +45,7 @@
       <excludeFolder url="file://$MODULE_DIR$/src/vendor/symfony/http-client-contracts" />
       <excludeFolder url="file://$MODULE_DIR$/src/vendor/symfony/http-foundation" />
       <excludeFolder url="file://$MODULE_DIR$/src/vendor/symfony/http-kernel" />
+      <excludeFolder url="file://$MODULE_DIR$/src/vendor/symfony/phpunit-bridge" />
       <excludeFolder url="file://$MODULE_DIR$/src/vendor/symfony/polyfill-intl-grapheme" />
       <excludeFolder url="file://$MODULE_DIR$/src/vendor/symfony/polyfill-intl-normalizer" />
       <excludeFolder url="file://$MODULE_DIR$/src/vendor/symfony/polyfill-mbstring" />

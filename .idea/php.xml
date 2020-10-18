@@ -66,6 +66,7 @@
       <path value="$PROJECT_DIR$/src/vendor/felixfbecker/advanced-json-rpc" />
       <path value="$PROJECT_DIR$/src/vendor/vimeo/psalm" />
       <path value="$PROJECT_DIR$/src/vendor/psalm/plugin-symfony" />
+      <path value="$PROJECT_DIR$/src/vendor/symfony/phpunit-bridge" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />

@@ -138,3 +138,27 @@ jobs:
 
       - name: Psalm
         run: ./vendor/bin/psalm --show-info=true
+
+  phpunit:
+    name: PHP Unit
+    runs-on: ubuntu-latest
+    needs: [psalm, phpmd, phpstan, phpcs]
+
+    steps:
+      - uses: actions/download-artifact@v2
+        with:
+          name: game-of-life
+
+      - name: Setup PHP for phpunit
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '7.4'
+          extensions: mbstring, intl
+          ini-values: post_max_size=256M, short_open_tag=On
+          tools: php-cs-fixer, phpunit
+
+      - name: Install dependencies for phpunit
+        run: composer install --prefer-dist --no-progress --no-suggest
+
+      - name: PHP Unit
+        run: php bin/phpunit
