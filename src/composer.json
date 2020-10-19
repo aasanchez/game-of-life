@@ -59,9 +59,21 @@
             "@auto-scripts"
         ],
         "static": [
+            "",
+            "# Psalm",
+            "",
             "./vendor/bin/psalm --show-info=true",
+            "",
+            "# PHP CodeSniffer",
+            "",
             "./vendor/bin/phpcs . -v",
+            "",
+            "# PHPStan",
+            "",
             "./vendor/bin/phpstan analyse -c phpstan.neon",
+            "",
+            "# PHP-Mess-Detector",
+            "",
             "./vendor/bin/phpmd . text cleancode,codesize,controversial,design,naming,unusedcode --exclude 'vendor','var','bin/.phpunit'"
         ],
         "unit": [
