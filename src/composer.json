@@ -70,14 +70,14 @@
             "",
             "# PHPStan",
             "",
-            "./vendor/bin/phpstan analyse -c phpstan.neon",
+          "./vendor/bin/phpstan analyse -c phpstan.neon",
             "",
             "# PHP-Mess-Detector",
             "",
             "./vendor/bin/phpmd . text cleancode,codesize,controversial,design,naming,unusedcode --exclude 'vendor','var','bin/.phpunit'"
         ],
         "unit": [
-            "php bin/phpunit"
+          "php bin/phpunit"
         ]
     },
     "conflict": {

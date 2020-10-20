@@ -1,4 +1,4 @@
-name: Build
+name: Backend-Challenge
 
 on:
   push:
@@ -41,7 +41,7 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: game-of-life
-          path: src/
+          path: src
 
   phpmd:
     name: PHP-Mess-Detector
