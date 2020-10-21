@@ -143,7 +143,7 @@ condensed into the following:
      *
      * @SuppressWarnings("CyclomaticComplexity")
      */
-    protected function getNeighbors(int $xAxis, int $yAxis) : int
+    public function getNeighbors(int $xAxis, int $yAxis) : int
     {
         $neighbors = 0;
         for ($y2 = $yAxis - 1; $y2 <= $yAxis + 1; $y2++) {

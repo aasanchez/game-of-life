@@ -89,7 +89,13 @@ jobs:
         run: composer install --prefer-dist --no-progress --no-suggest
 
       - name: Psalm
-        run: ./vendor/bin/psalm --show-info=true
+        run: ./vendor/bin/psalm --show-info=true > psalm.txt
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: Psalm
+          path: psalm.txt
+          retention-days: 1
 
   phpcs:
     name: PHP CodeSniffer
