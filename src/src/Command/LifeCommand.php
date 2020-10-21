@@ -21,9 +21,9 @@ class LifeCommand extends Command
     public function __construct()
     {
         $this->opt = [
-            "height" => intval(exec('tput lines')) - 7,
-            "width" => intval(exec('tput cols')),
-            "FPS" => 10,
+            "height" => intval(exec('tput lines')) ? intval(exec('tput lines')) - 7 : 35 ,
+            "width" => intval(exec('tput cols'))? intval(exec('tput cols')) : 120 ,
+            "FPS" => 20,
             "odds" => 1,
         ];
         parent::__construct();
@@ -76,7 +76,7 @@ condensed into the following:
                     }
                     $toPrint .= $state;
                 }
-                $output->writeln($toPrint);
+                $output->writeln('<fg=black;bg=white>'.$toPrint.'</>');
             }
 
             $endTime = microtime(true);
@@ -89,7 +89,7 @@ condensed into the following:
                         $this->opt["height"],
                         $this->getTime($endTime - $startTime),
                         $this->countCells().'/'.$this->opt["width"] * $this->opt["height"],
-                        $this->opt["FPS"],
+                        $this->opt["FPS"]
                     ],
                 ]
             );
