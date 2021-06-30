@@ -16,10 +16,10 @@
     "require-dev": {
         "phpmd/phpmd": "@stable",
         "phpstan/phpstan": "^0.12.50",
-        "psalm/plugin-symfony": "^1.5",
+        "psalm/plugin-symfony": "^2.3",
         "squizlabs/php_codesniffer": "3.*",
         "symfony/phpunit-bridge": "^5.1",
-        "vimeo/psalm": "^3.17"
+        "vimeo/psalm": "^4.8"
     },
     "config": {
         "optimize-autoloader": true,
